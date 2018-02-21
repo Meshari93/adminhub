@@ -97,7 +97,7 @@ class PropertyController extends Controller
     public function store(Request $request)
     {
       $validatedData = $request->validate([
-        'name' => 'required|alpha_dash|max:191',
+        'name' => 'required|string|max:191',
         // 'user_id' => 'required|integer|max:10',
         'type' => 'required|alpha_dash|max:191',
         'phon_num_one' => 'required|integer',
