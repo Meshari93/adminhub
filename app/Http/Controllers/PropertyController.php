@@ -98,7 +98,7 @@ class PropertyController extends Controller
     {
       $validatedData = $request->validate([
         'name' => 'required|alpha_dash|max:191',
-        'user_id' => 'required|integer|max:10',
+        // 'user_id' => 'required|integer|max:10',
         'type' => 'required|alpha_dash|max:191',
         'phon_num_one' => 'required|integer',
         'phon_num_two' => 'integer',

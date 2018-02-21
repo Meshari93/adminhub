@@ -30,10 +30,5 @@ class DatabaseSeeder extends Seeder
             'created_at' => '2017-12-18 02:07:36',
             'updated_at' => '2017-12-18 02:07:36',
             ]);
-        DB::table('model_has_roles')->insert([
-            'role_id' => '2',
-            'model_id' => '1',
-            'model_type' => 'App\User',
-            ]);
-    }
+     }
 }
