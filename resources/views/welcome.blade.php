@@ -475,8 +475,8 @@
                        <div class="carousel-inner" role="listbox">
                          <div class="item active">
                            @if( $property->picture_home !=NULL  )
-                                <img src="../../images/store/sectionimage/{{$property->picture_home}}" />
-                            @endif
+                           <img src="{{ URL::to('/images/store/sectionimage/' . $property->picture_home ) }}">
+                             @endif
                          </div>
                        </div>
                   </div>
@@ -513,7 +513,7 @@
                    <button data-propertyId="{{ $property->id }}_a" type="button"class="addFavorite btn btn-danger btn-circle  waves-effect waves-circle waves-float"><i class="addFavorite material-icons">favorite_border</i></button>
                     @elseif($favoritedtat == 0)
                     <button   data-propertyId="{{ $property->id }}_a" type="button"class="addFavorite btn btn-grey btn-circle waves-effect waves-circle waves-float col-red"><i class=" addFavorite material-icons ">favorite_border</i></button>
-                     {{ $property->id }}
+                     
                     @endif
                   @endif
                 </div>
