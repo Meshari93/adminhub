@@ -23,7 +23,7 @@ class SectionController extends Controller
       $this->middleware('auth');
   }
 
-  
+
   public function rules()
   {
     $rules = [
@@ -109,7 +109,9 @@ class SectionController extends Controller
             $img = 'picture' .$i;
             // $imagename  = $request->file1[0];
             $filename = $request->property_id .'-'. $sectionprise_id . '-'. time() . $i . '.' . $imagename->getClientOriginalExtension();
-            Image::make($imagename)->resize(1024, 640)->save(public_path('/images/store/sectionimage/') . $filename);
+            $imagename->move(public_path('/images/store/sectionimage/'), $filename);
+
+            // Image::make($imagename)->resize(1024, 640)->save(public_path('/images/store/sectionimage/') . $filename);
             $sectionimage-> $img                =  $filename;
          }
           } else {
@@ -220,7 +222,9 @@ class SectionController extends Controller
              $i = $i + 1;
              $img = 'picture' .$i;
              $filename =  time() . $i . '.' . $imagename->getClientOriginalExtension();
-             Image::make($imagename)->resize(1024, 640)->save(public_path('/images/store/sectionimage/') . $filename);
+             $imagename->move(public_path('/images/store/sectionimage/'), $filename);
+
+             // Image::make($imagename)->resize(1024, 640)->save(public_path('/images/store/sectionimage/') . $filename);
              $sectionimage = Picture::where('section_id', '=', $id)->update([$img => $filename]);
            }
          }

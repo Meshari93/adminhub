@@ -132,7 +132,9 @@ class PropertyController extends Controller
                    $imagename = $request->image;
 
                      $filename =   $request->user_id . '-' .time() . '.' . $imagename->getClientOriginalExtension();
-                     Image::make($imagename)->resize(1024, 640)->save(public_path('/images/store/sectionimage/') . $filename);
+                     $imagename->move(public_path('/images/store/sectionimage/'), $filename);
+                     // Image::make($imagename)->resize(1024, 640)->save(public_path('/images/store/sectionimage/') . $filename);
+
                      $property->picture_home                =  $filename;
 
                    } else {
@@ -205,7 +207,9 @@ class PropertyController extends Controller
         if ($request->hasFile('image')) {
          $imagename = $request->image;
             $filename =   $property->user_id . '-' .time() . '.' . $imagename->getClientOriginalExtension();
-           Image::make($imagename)->resize(1024, 640)->save(public_path('/images/store/sectionimage/') . $filename);
+            $imagename->move(public_path('/images/store/sectionimage/'), $filename);
+
+           // Image::make($imagename)->resize(1024, 640)->save(public_path('/images/store/sectionimage/') . $filename);
            $property->picture_home                =  $filename;
 
          }
