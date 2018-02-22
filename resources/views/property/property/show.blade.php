@@ -208,99 +208,88 @@
                                  <div class="item active">
                                     <img src="{{ URL::to('/images/store/sectionimage/' . $picture->picture1 ) }}">
                                     <div class="carousel-caption">
-                                       <h3>Second slide label</h3>
-                                       <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                                    </div>
+                                       <h3>1</h3>
+                                     </div>
                                  </div>
                                  @endif
                                  @if( $picture->picture2 !=NULL  )
                                  <div class="item">
                                    <img src="{{ URL::to('/images/store/sectionimage/' . $picture->picture2 ) }}">
                                       <div class="carousel-caption">
-                                       <h3>Second slide label</h3>
-                                       <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                                    </div>
+                                       <h3>2</h3>
+                                     </div>
                                  </div>
                                  @endif
                                  @if( $picture->picture3 !=NULL  )
                                  <div class="item">
                                    <img src="{{ URL::to('/images/store/sectionimage/' . $picture->picture3 ) }}">
                                       <div class="carousel-caption">
-                                       <h3>Second slide label</h3>
-                                       <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                                    </div>
+                                       <h3>3</h3>
+                                     </div>
                                  </div>
                                  @endif
                                  @if( $picture->picture4 !=NULL  )
                                  <div class="item">
                                      <img src="{{ URL::to('/images/store/sectionimage/' . $picture->picture4 ) }}">
                                      <div class="carousel-caption">
-                                       <h3>Second slide label</h3>
-                                       <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                                    </div>
+                                       <h3>4</h3>
+                                     </div>
                                  </div>
                                  @endif
                                  @if( $picture->picture5 !=NULL  )
                                  <div class="item">
                                    <img src="{{ URL::to('/images/store/sectionimage/' . $picture->picture5 ) }}">
                                       <div class="carousel-caption">
-                                       <h3>Second slide label</h3>
-                                       <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                                    </div>
+                                       <h3>5</h3>
+                                     </div>
                                  </div>
                                  @endif
                                  @if( $picture->picture6 !=NULL  )
                                  <div class="item">
                                    <img src="{{ URL::to('/images/store/sectionimage/' . $picture->picture6 ) }}">
                                      <div class="carousel-caption">
-                                       <h3>Second slide label</h3>
-                                       <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                                    </div>
+                                       <h3>6</h3>
+                                     </div>
                                  </div>
                                  @endif
                                  @if( $picture->picture7 !=NULL  )
                                  <div class="item">
                                    <img src="{{ URL::to('/images/store/sectionimage/' . $picture->picture7 ) }}">
                                      <div class="carousel-caption">
-                                       <h3>Second slide label</h3>
-                                       <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                                    </div>
+                                       <h3>7</h3>
+                                     </div>
                                  </div>
                                  @endif
                                  @if( $picture->picture8 !=NULL  )
                                  <div class="item">
                                    <img src="{{ URL::to('/images/store/sectionimage/' . $picture->picture8 ) }}">
                                      <div class="carousel-caption">
-                                       <h3>Second slide label</h3>
-                                       <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                                    </div>
+                                       <h3>8</h3>
+                                     </div>
                                  </div>
                                  @endif
                                  @if( $picture->picture9 !=NULL  )
                                  <div class="item">
                                    <img src="{{ URL::to('/images/store/sectionimage/' . $picture->picture9 ) }}">
                                      <div class="carousel-caption">
-                                       <h3>Second slide label</h3>
-                                       <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                                    </div>
+                                       <h3>9</h3>
+                                     </div>
                                  </div>
                                  @endif
                                  @if( $picture->picture10 !=NULL  )
                                  <div class="item">
                                    <img src="{{ URL::to('/images/store/sectionimage/' . $picture->picture10 ) }}">
                                      <div class="carousel-caption">
-                                       <h3>Second slide label</h3>
-                                       <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                                    </div>
+                                       <h3>10</h3>
+                                     </div>
                                  </div>
                                  @endif
                                  @if( $picture->picture11 !=NULL  )
                                  <div class="item">
                                    <img src="{{ URL::to('/images/store/sectionimage/' . $picture->picture11 ) }}">
                                      <div class="carousel-caption">
-                                       <h3>Second slide label</h3>
-                                       <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                                    </div>
+                                       <h3>11</h3>
+                                     </div>
                                  </div>
                                  @endif
                               </div>
