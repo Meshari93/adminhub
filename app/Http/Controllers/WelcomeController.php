@@ -47,4 +47,20 @@ class WelcomeController extends Controller
       return view('welcome', compact('propertys' ));
     }
 
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     *
+     * @return \Illuminate\View\View
+     */
+    public function display($id)
+    {
+        $property = Property::findOrFail($id);
+        $i =1;
+        $imag  = 'img';
+        return view('display', compact('property','i'.'imag'));
+    }
+
+
 }

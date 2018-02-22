@@ -5,6 +5,8 @@
       <div class="panel panel-default">
          <div class="panel-heading">Informatiom : {{ $property->name }}</div>
          <div class="panel-body">
+            <!-- auth()->user()->hasRole('admin')  -->
+           @if( $property->user_id == Auth::user()->id )
             <a href="{{ url('/property') }}" title="Back"><button class="btn btn-warning btn-xs"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
             <a href="{{ url('/property/' . $property->id . '/edit') }}" title="Edit Property"><button class="btn btn-primary btn-xs"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
             <form method="POST" action="{{ url('property' . '/' . $property->id) }}" accept-charset="UTF-8" style="display:inline">
@@ -14,6 +16,7 @@
             </form>
             <a href="{{ url('property/' . $property->id . '/createsection') }}" title="Add Section"><button class="btn btn-success right btn-xs"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> New Section</button></a>
             <br/>
+            @endif
             <br/>
             <div class="table-responsive">
                <table class="table table-borderless">

@@ -59,18 +59,18 @@ class UserController extends Controller
     public function store(Request $request)
     {
       $validatedData = $request->validate([
-        'first_name' => 'required|alpha|max:255',
-        'last_name' => 'required|alpha|max:255',
-        'email' => 'required|string|email|max:255|unique:users',
+        'first_name' => 'required|string|max:100',
+        'last_name' => 'required|string|max:100',
+        'email' => 'required|string|email|max:100|unique:users',
         'password' => 'required|string|min:8',
          ]);
 
         $requestData = $request->except('roles');
         $roles = $request->roles;
+        $user = User::create($requestData);
         if ($request->roles !== NULL) {
             $user->assignRole($roles);
         }
-          $user = User::create($requestData);
         return redirect('admin/user')->with('flash_message', 'User added!');
     }
 
@@ -113,9 +113,9 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
       $validatedData = $request->validate([
-        'first_name' => 'required|alpha|max:255',
-        'last_name' => 'required|alpha|max:255',
-        'email' => 'required|string|email|max:255|unique:users',
+        'first_name' => 'required|alpha|max:100',
+        'last_name' => 'required|alpha|max:100',
+        'email' => 'required|string|email|max:100|unique:users',
         'password' => 'required|string|min:8',
          ]);
 

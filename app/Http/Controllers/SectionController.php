@@ -67,16 +67,15 @@ class SectionController extends Controller
     public function store(Request $request)
     {
       $validatedData = $request->validate([
-        'name' => 'required|alpha_dash|max:191',
+        'name' => 'required|string|max:100',
         'room_num' => 'required|integer',
         'capacity' => 'required|integer',
         'property_id' => 'required|integer',
-
-        'typical_day' => 'required|integer',
+         'typical_day' => 'required|integer',
         'weekend' => 'required|integer',
         'feast' => 'required|integer',
-        'feast' => 'required|integer',
-        'file1.*' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
+         'file1.*.image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+
           ]);
 
 
@@ -189,16 +188,15 @@ class SectionController extends Controller
     public function update(Request $request, $id)
     {
       $validatedData = $request->validate([
-        'name' => 'required|alpha_dash|max:191',
-        'room_num' => 'required|integer|max:10',
-        'capacity' => 'required|integer|max:10',
-        'property_id' => 'required|integer|max:10',
+        'name' => 'required|string|max:100',
+        'room_num' => 'required|integer|max:1000000',
+        'capacity' => 'required|integer|max:1000000',
+        'property_id' => 'required|integer|max:1000000',
 
-        'typical_day' => 'required|integer|max:10',
-        'weekend' => 'required|integer|max:10',
-        'feast' => 'required|integer|max:10',
-        'feast' => 'required|integer|max:10',
-        'file' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        'typical_day' => 'required|integer|max:100000000',
+        'weekend' => 'required|integer|max:100000000',
+        'feast' => 'required|integer|max:100000000',
+        'file1.*.image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
           ]);
 
         // $requestData = $request->all();

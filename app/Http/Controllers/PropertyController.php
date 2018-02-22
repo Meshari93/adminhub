@@ -99,13 +99,13 @@ class PropertyController extends Controller
       $validatedData = $request->validate([
         'name' => 'required|string|max:191',
         // 'user_id' => 'required|integer|max:10',
-        'type' => 'required|alpha_dash|max:191',
+        'type' => 'required|string|max:191',
         'phon_num_one' => 'required|integer',
         'phon_num_two' => 'integer',
         'time_entry' => 'required|string',
         'time_out' => 'required|string',
-        'describstion' => 'required|alpha_dash|max:500',
-         'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
+        'describstion' => 'required|string|max:500',
+         'image' => 'required|image|mimes:jpeg,jpg,png,gif|max:2048',
          ]);
               $property = new Property;
               $property->name = $request->name;
@@ -132,8 +132,8 @@ class PropertyController extends Controller
                    $imagename = $request->image;
 
                      $filename =   $request->user_id . '-' .time() . '.' . $imagename->getClientOriginalExtension();
-                     $imagename->move(public_path('/images/store/sectionimage/'), $filename);
-                     // Image::make($imagename)->resize(1024, 640)->save(public_path('/images/store/sectionimage/') . $filename);
+                     // $imagename->move(public_path('/images/store/sectionimage/'), $filename);
+                     Image::make($imagename)->resize(1024, 640)->move(public_path('/images/store/sectionimage/') . $filename);
 
                      $property->picture_home                =  $filename;
 
@@ -188,15 +188,15 @@ class PropertyController extends Controller
     public function update(Request $request, $id)
     {
       $validatedData = $request->validate([
-        'name' => 'required|alpha_dash|max:191',
+        'name' => 'required|string|max:191',
         'user_id' => 'required|integer|max:10',
-        'type' => 'required|alpha_dash|max:191',
+        'type' => 'required|string|max:191',
         'phon_num_one' => 'required|integer',
         'phon_num_two' => 'integer',
         'time_entry' => 'required|string',
         'time_out' => 'required|string',
-        'describstion' => 'required|alpha_dash|max:500',
-        'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
+        'describstion' => 'required|string|max:500',
+        'image' => 'required|image|mimes:jpeg,jpg,png,gif|max:2048',
          ]);
 
         $requestData = $request->all();

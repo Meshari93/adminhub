@@ -469,7 +469,7 @@
   @foreach($propertys as $property )
   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
          <div class="card">
-           <a href="{{ url('/property/' . $property->id) }}">
+           <a href="{{ url('/display/' . $property->id) }}">
              <div class="header">
                  <div class="carousel slide" data-ride="carousel">
                        <div class="carousel-inner" role="listbox">
@@ -513,7 +513,7 @@
                    <button data-propertyId="{{ $property->id }}_a" type="button"class="addFavorite btn btn-danger btn-circle  waves-effect waves-circle waves-float"><i class="addFavorite material-icons">favorite_border</i></button>
                     @elseif($favoritedtat == 0)
                     <button   data-propertyId="{{ $property->id }}_a" type="button"class="addFavorite btn btn-grey btn-circle waves-effect waves-circle waves-float col-red"><i class=" addFavorite material-icons ">favorite_border</i></button>
-                     
+
                     @endif
                   @endif
                 </div>
